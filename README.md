@@ -1,4 +1,4 @@
-# SmartTime
+# SmartTime / BTClock
 Arduino Display with Bluetooth controls
 
 Inspired by the LAMetric display, I have build my own LED display with bluetooth control using a 32x8 LED Matrix and a cheap arduino nano board with bluetooth (Bluething).
