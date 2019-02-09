@@ -143,8 +143,11 @@ void paintDigit(int address,int digit){
             }
    }
 
-
 void paintText(int offset, String txt){
+  paintText(offset,txt,false);
+}
+
+void paintText(int offset, String txt, boolean narrow){
    // clearDisplay();
     int sz = offset;
 //    Serial.println(txt);
@@ -154,7 +157,8 @@ void paintText(int offset, String txt){
 
    for(int c=0; c < txt.length(); c++){
     sz += paintDigit2(sz,txt.charAt(c) -48);
-    clearColumn(sz++);
+    clearColumn(sz);
+    if(!narrow) sz++;
     if(sz>32) break;
    }
 
